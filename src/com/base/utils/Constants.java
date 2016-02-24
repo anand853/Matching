@@ -3,9 +3,14 @@ package com.base.utils;
 public interface Constants {
 
 	String MATCH_COM = "http://www.match.com/";
+
+	String PAGE_TITLE = "Match.com® | The Leading Online Dating Site for Singles & Personals : Match.com";
+
 	String REGISTARION_LINK = "/registration/registration.aspx";
 	String RESGISTARTION_LINK_TXT = "Join for FREE »";
 	String SIGNIN_TXT = "Member Sign In »";
+
+	String LOG_STATEMENT = "----Calling-----";
 
 	String VIEW_SINGLE_BTN = "//*[@id='progessive']/div[1]/fieldset[1]/button";
 	String EMAIL_ID = "//*[@id='progessive']/div[1]/fieldset[2]/div[2]/input";

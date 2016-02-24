@@ -1312,3 +1312,170 @@
 2016-02-24 01:43:04 INFO  UserRegistration:53 - ----We are in-----LogIn
 2016-02-24 01:43:04 INFO  UserRegistration:43 - ----We are in-----clickOnUserName
 2016-02-24 01:43:04 INFO  UserRegistration:27 - ----We are in-----clickOnMyFav
+2016-02-24 12:23:42 INFO  UserRegistration:422 - ----We are in-----clickOnMemberSignLink
+2016-02-24 12:24:10 INFO  UserRegistration:53 - ----We are in-----LogIn
+2016-02-24 12:24:10 INFO  UserRegistration:43 - ----We are in-----clickOnUserName
+2016-02-24 12:24:10 INFO  UserRegistration:27 - ----We are in-----clickOnMyFav
+2016-02-24 12:24:37 INFO  UserRegistration:53 - ----We are in-----LogIn
+2016-02-24 12:24:45 INFO  UserRegistration:441 - ----We are in-----acessToMatchSite
+2016-02-24 12:24:51 INFO  UserRegistration:432 - ----We are in-----maximizePage
+2016-02-24 12:24:54 INFO  UserRegistration:422 - ----We are in-----clickOnMemberSignLink
+2016-02-24 12:25:01 INFO  UserRegistration:66 - ----We are in-----enterUserNamePass
+2016-02-24 12:25:02 INFO  UserRegistration:43 - ----We are in-----clickOnUserName
+2016-02-24 12:25:06 INFO  UserRegistration:27 - ----We are in-----clickOnMyFav
+2016-02-24 12:25:17 INFO  UserRegistration:78 - ----We are in-----logOut
+2016-02-24 13:01:00 INFO  UserRegistration:53 - ----We are in-----LogIn
+2016-02-24 13:01:06 INFO  UserRegistration:441 - ----We are in-----acessToMatchSite
+2016-02-24 13:01:10 INFO  UserRegistration:432 - ----We are in-----maximizePage
+2016-02-24 13:01:13 INFO  UserRegistration:422 - ----We are in-----clickOnMemberSignLink
+2016-02-24 13:01:19 INFO  UserRegistration:66 - ----We are in-----enterUserNamePass
+2016-02-24 13:01:20 INFO  UserRegistration:43 - ----We are in-----clickOnUserName
+2016-02-24 13:01:22 INFO  UserRegistration:27 - ----We are in-----clickOnMyFav
+2016-02-24 13:28:33 INFO  UserRegistration:53 - ----Calling-----LogIn
+2016-02-24 13:28:40 INFO  UserRegistration:438 - ----Calling-----acessToMatchSite
+2016-02-24 13:28:40 INFO  UserRegistration:429 - ----Calling-----maximizePage
+2016-02-24 13:28:43 INFO  UserRegistration:419 - ----Calling-----clickOnMemberSignLink
+2016-02-24 13:28:43 INFO  UserRegistration:43 - ----Calling-----clickOnUserName
+2016-02-24 13:28:53 INFO  UserRegistration:27 - ----Calling-----clickOnMyFav
+2016-02-24 13:30:41 INFO  UserRegistration:53 - ----Calling-----LogIn
+2016-02-24 13:30:48 INFO  UserRegistration:438 - ----Calling-----acessToMatchSite
+2016-02-24 13:30:48 INFO  UserRegistration:429 - ----Calling-----maximizePage
+2016-02-24 13:30:50 INFO  UserRegistration:419 - ----Calling-----clickOnMemberSignLink
+2016-02-24 13:30:50 INFO  UserRegistration:43 - ----Calling-----clickOnUserName
+2016-02-24 13:31:00 INFO  UserRegistration:27 - ----Calling-----clickOnMyFav
+2016-02-24 13:32:46 INFO  UserRegistration:53 - ----Calling-----LogIn
+2016-02-24 13:32:52 INFO  UserRegistration:438 - ----Calling-----acessToMatchSite
+2016-02-24 13:32:52 INFO  UserRegistration:429 - ----Calling-----maximizePage
+2016-02-24 13:32:55 INFO  UserRegistration:419 - ----Calling-----clickOnMemberSignLink
+2016-02-24 13:33:15 INFO  UserRegistration:43 - ----Calling-----clickOnUserName
+2016-02-24 14:08:10 INFO  UserRegistration:53 - ----Calling-----LogIn
+2016-02-24 14:08:16 INFO  UserRegistration:439 - ----Calling-----acessToMatchSite
+2016-02-24 14:08:16 INFO  UserRegistration:430 - ----Calling-----maximizePage
+2016-02-24 14:08:18 INFO  UserRegistration:420 - ----Calling-----clickOnMemberSignLink
+2016-02-24 14:08:25 INFO  UserRegistration:66 - ----Calling-----enterUserNamePass
+2016-02-24 14:08:26 INFO  UserRegistration:43 - ----Calling-----clickOnUserName
+2016-02-24 14:08:35 INFO  UserRegistration:27 - ----Calling-----clickOnMyFav
+2016-02-24 14:08:48 INFO  UserRegistration:439 - ----Calling-----acessToMatchSite
+2016-02-24 14:08:48 INFO  UserRegistration:430 - ----Calling-----maximizePage
+2016-02-24 14:08:51 INFO  UserRegistration:420 - ----Calling-----clickOnMemberSignLink
+2016-02-24 14:08:57 INFO  UserRegistration:411 - ----Calling-----clickOnRegistartionLink
+2016-02-24 14:08:59 INFO  UserRegistration:401 - ----Calling-----enterZipCode
+2016-02-24 14:08:59 INFO  UserRegistration:391 - ----Calling-----clickOnViewSinglesButton
+2016-02-24 14:09:00 INFO  UserRegistration:381 - ----Calling-----enterEmailId
+2016-02-24 14:09:00 INFO  UserRegistration:371 - ----Calling-----cilckOnContinuewButton
+2016-02-24 14:09:01 INFO  UserRegistration:361 - ----Calling-----enterPassword
+2016-02-24 14:09:01 INFO  UserRegistration:351 - ----Calling-----clickOnContinuewPassButton
+2016-02-24 14:09:01 INFO  UserRegistration:341 - ----Calling-----enterUserName
+2016-02-24 14:09:01 INFO  UserRegistration:331 - ----Calling-----clickOnContinuewUserButton
+2016-02-24 14:09:01 INFO  UserRegistration:321 - ----Calling-----clickOngetStartedButton
+2016-02-24 14:09:04 INFO  UserRegistration:311 - ----Calling-----clickOnHairColorButton
+2016-02-24 14:09:06 INFO  UserRegistration:301 - ----Calling-----clickOnRelationshipButton
+2016-02-24 14:09:08 INFO  UserRegistration:291 - ----Calling-----clickOnEducationButton
+2016-02-24 14:09:10 INFO  UserRegistration:281 - ----Calling-----clickOnSmokeButton
+2016-02-24 14:09:11 INFO  UserRegistration:272 - ----Calling-----clickOnBackgrounButton
+2016-02-24 14:09:14 INFO  UserRegistration:262 - ----Calling-----clickOnFavButton
+2016-02-24 14:09:15 INFO  UserRegistration:252 - ----Calling-----clickOnInterestButton
+2016-02-24 14:09:18 INFO  UserRegistration:242 - ----Calling-----clickOnHairEyeColorButton
+2016-02-24 14:09:20 INFO  UserRegistration:232 - ----Calling-----clickOnEducationLangButton
+2016-02-24 14:09:22 INFO  UserRegistration:222 - ----Calling-----clickOnEthinicButton
+2016-02-24 14:09:24 INFO  UserRegistration:212 - ----Calling-----clickOnRelationShipKidsButton
+2016-02-24 14:09:26 INFO  UserRegistration:202 - ----Calling-----clickOnSalaryButton
+2016-02-24 14:09:28 INFO  UserRegistration:190 - ----Calling-----clickOnHeadLinesButton
+2016-02-24 14:09:30 INFO  UserRegistration:174 - ----Calling-----clickOnAboutYouButton
+2016-02-24 14:09:33 INFO  UserRegistration:164 - ----Calling-----clickOnProfilePicButton
+2016-02-24 14:09:56 INFO  UserRegistration:154 - ----Calling-----clickOnFirstMatchesButton
+2016-02-24 14:09:57 INFO  UserRegistration:145 - ----Calling-----clickOnAddProfilePicButton
+2016-02-24 14:09:58 INFO  UserRegistration:135 - ----Calling-----clickOnAddAPicButton
+2016-02-24 14:10:02 INFO  UserRegistration:125 - ----Calling-----clickOnSearchBox
+2016-02-24 14:10:09 INFO  UserRegistration:113 - ----Calling-----enterTextSearchBox
+2016-02-24 14:10:10 INFO  UserRegistration:103 - ----Calling-----clickOnSaveButton
+2016-02-24 14:12:53 INFO  UserRegistration:440 - ----Calling-----acessToMatchSite
+2016-02-24 14:12:53 INFO  UserRegistration:431 - ----Calling-----maximizePage
+2016-02-24 14:12:55 INFO  UserRegistration:421 - ----Calling-----clickOnMemberSignLink
+2016-02-24 14:13:02 INFO  UserRegistration:412 - ----Calling-----clickOnRegistartionLink
+2016-02-24 14:13:02 INFO  UserRegistration:402 - ----Calling-----enterZipCode
+2016-02-24 14:13:04 INFO  UserRegistration:392 - ----Calling-----clickOnViewSinglesButton
+2016-02-24 14:13:05 INFO  UserRegistration:382 - ----Calling-----enterEmailId
+2016-02-24 14:13:05 INFO  UserRegistration:372 - ----Calling-----cilckOnContinuewButton
+2016-02-24 14:13:05 INFO  UserRegistration:362 - ----Calling-----enterPassword
+2016-02-24 14:13:09 INFO  UserRegistration:352 - ----Calling-----clickOnContinuewPassButton
+2016-02-24 14:13:09 INFO  UserRegistration:342 - ----Calling-----enterUserName
+2016-02-24 14:13:09 INFO  UserRegistration:332 - ----Calling-----clickOnContinuewUserButton
+2016-02-24 14:13:09 INFO  UserRegistration:322 - ----Calling-----clickOngetStartedButton
+2016-02-24 14:13:13 INFO  UserRegistration:312 - ----Calling-----clickOnHairColorButton
+2016-02-24 14:13:14 INFO  UserRegistration:302 - ----Calling-----clickOnRelationshipButton
+2016-02-24 14:13:16 INFO  UserRegistration:292 - ----Calling-----clickOnEducationButton
+2016-02-24 14:13:18 INFO  UserRegistration:282 - ----Calling-----clickOnSmokeButton
+2016-02-24 14:13:20 INFO  UserRegistration:273 - ----Calling-----clickOnBackgrounButton
+2016-02-24 14:13:22 INFO  UserRegistration:263 - ----Calling-----clickOnFavButton
+2016-02-24 14:13:24 INFO  UserRegistration:253 - ----Calling-----clickOnInterestButton
+2016-02-24 14:13:26 INFO  UserRegistration:243 - ----Calling-----clickOnHairEyeColorButton
+2016-02-24 14:13:28 INFO  UserRegistration:233 - ----Calling-----clickOnEducationLangButton
+2016-02-24 14:13:29 INFO  UserRegistration:223 - ----Calling-----clickOnEthinicButton
+2016-02-24 14:13:31 INFO  UserRegistration:213 - ----Calling-----clickOnRelationShipKidsButton
+2016-02-24 14:13:33 INFO  UserRegistration:203 - ----Calling-----clickOnSalaryButton
+2016-02-24 14:13:34 INFO  UserRegistration:191 - ----Calling-----clickOnHeadLinesButton
+2016-02-24 14:13:36 INFO  UserRegistration:175 - ----Calling-----clickOnAboutYouButton
+2016-02-24 14:13:39 INFO  UserRegistration:165 - ----Calling-----clickOnProfilePicButton
+2016-02-24 14:14:01 INFO  UserRegistration:155 - ----Calling-----clickOnFirstMatchesButton
+2016-02-24 14:14:02 INFO  UserRegistration:146 - ----Calling-----clickOnAddProfilePicButton
+2016-02-24 14:14:03 INFO  UserRegistration:136 - ----Calling-----clickOnAddAPicButton
+2016-02-24 14:14:06 INFO  UserRegistration:126 - ----Calling-----clickOnSearchBox
+2016-02-24 14:14:07 INFO  UserRegistration:112 - ----Calling-----enterTextSearchBox
+2016-02-24 14:14:11 INFO  UserRegistration:102 - ----Calling-----clickOnSaveButton
+2016-02-24 14:14:13 INFO  UserRegistration:91 - ----Calling-----clickOnFavMe
+2016-02-24 14:14:17 INFO  UserRegistration:78 - ----Calling-----logOut
+2016-02-24 17:01:04 INFO  UserRegistration:54 - ----Calling-----LogIn
+2016-02-24 17:01:10 INFO  UserRegistration:441 - ----Calling-----acessToMatchSite
+2016-02-24 17:01:13 INFO  UserRegistration:445 -  The page title is Match.com® | The Leading Online Dating Site for Singles & Personals : Match.com
+2016-02-24 17:01:13 INFO  UserRegistration:44 - ----Calling-----clickOnUserName
+2016-02-24 17:01:23 INFO  UserRegistration:28 - ----Calling-----clickOnMyFav
+2016-02-24 17:01:37 INFO  UserRegistration:54 - ----Calling-----LogIn
+2016-02-24 17:01:43 INFO  UserRegistration:441 - ----Calling-----acessToMatchSite
+2016-02-24 17:02:30 INFO  UserRegistration:445 -  The page title is Match.com® | The Leading Online Dating Site for Singles & Personals : Match.com
+2016-02-24 17:02:30 INFO  UserRegistration:44 - ----Calling-----clickOnUserName
+2016-02-24 17:02:40 INFO  UserRegistration:28 - ----Calling-----clickOnMyFav
+2016-02-24 17:04:07 INFO  UserRegistration:54 - ----Calling-----LogIn
+2016-02-24 17:04:13 INFO  UserRegistration:441 - ----Calling-----acessToMatchSite
+2016-02-24 17:04:15 INFO  UserRegistration:445 -  The page title is Match.com® | The Leading Online Dating Site for Singles & Personals : Match.com
+2016-02-24 17:04:15 INFO  UserRegistration:432 - ----Calling-----maximizePage
+2016-02-24 17:04:16 INFO  UserRegistration:422 - ----Calling-----clickOnMemberSignLink
+2016-02-24 17:04:23 INFO  UserRegistration:67 - ----Calling-----enterUserNamePass
+2016-02-24 17:04:24 INFO  UserRegistration:44 - ----Calling-----clickOnUserName
+2016-02-24 17:06:18 INFO  UserRegistration:441 - ----Calling-----acessToMatchSite
+2016-02-24 17:06:21 INFO  UserRegistration:445 -  The page title is Match.com® | The Leading Online Dating Site for Singles & Personals : Match.com
+2016-02-24 17:06:21 INFO  UserRegistration:432 - ----Calling-----maximizePage
+2016-02-24 17:06:21 INFO  UserRegistration:422 - ----Calling-----clickOnMemberSignLink
+2016-02-24 17:06:25 INFO  UserRegistration:413 - ----Calling-----clickOnRegistartionLink
+2016-02-24 17:06:27 INFO  UserRegistration:403 - ----Calling-----enterZipCode
+2016-02-24 17:06:27 INFO  UserRegistration:393 - ----Calling-----clickOnViewSinglesButton
+2016-02-24 17:06:28 INFO  UserRegistration:383 - ----Calling-----enterEmailId
+2016-02-24 17:06:28 INFO  UserRegistration:373 - ----Calling-----cilckOnContinuewButton
+2016-02-24 17:06:29 INFO  UserRegistration:363 - ----Calling-----enterPassword
+2016-02-24 17:06:29 INFO  UserRegistration:353 - ----Calling-----clickOnContinuewPassButton
+2016-02-24 17:06:29 INFO  UserRegistration:343 - ----Calling-----enterUserName
+2016-02-24 17:06:29 INFO  UserRegistration:333 - ----Calling-----clickOnContinuewUserButton
+2016-02-24 17:06:29 INFO  UserRegistration:323 - ----Calling-----clickOngetStartedButton
+2016-02-24 17:06:33 INFO  UserRegistration:313 - ----Calling-----clickOnHairColorButton
+2016-02-24 17:06:35 INFO  UserRegistration:303 - ----Calling-----clickOnRelationshipButton
+2016-02-24 17:06:38 INFO  UserRegistration:293 - ----Calling-----clickOnEducationButton
+2016-02-24 17:06:40 INFO  UserRegistration:283 - ----Calling-----clickOnSmokeButton
+2016-02-24 17:06:42 INFO  UserRegistration:274 - ----Calling-----clickOnBackgrounButton
+2016-02-24 17:06:46 INFO  UserRegistration:264 - ----Calling-----clickOnFavButton
+2016-02-24 17:06:48 INFO  UserRegistration:254 - ----Calling-----clickOnInterestButton
+2016-02-24 17:06:50 INFO  UserRegistration:244 - ----Calling-----clickOnHairEyeColorButton
+2016-02-24 17:06:52 INFO  UserRegistration:234 - ----Calling-----clickOnEducationLangButton
+2016-02-24 17:06:54 INFO  UserRegistration:224 - ----Calling-----clickOnEthinicButton
+2016-02-24 17:06:56 INFO  UserRegistration:214 - ----Calling-----clickOnRelationShipKidsButton
+2016-02-24 17:06:58 INFO  UserRegistration:204 - ----Calling-----clickOnSalaryButton
+2016-02-24 17:07:00 INFO  UserRegistration:192 - ----Calling-----clickOnHeadLinesButton
+2016-02-24 17:07:02 INFO  UserRegistration:176 - ----Calling-----clickOnAboutYouButton
+2016-02-24 17:07:09 INFO  UserRegistration:166 - ----Calling-----clickOnProfilePicButton
+2016-02-24 17:07:31 INFO  UserRegistration:156 - ----Calling-----clickOnFirstMatchesButton
+2016-02-24 17:07:33 INFO  UserRegistration:147 - ----Calling-----clickOnAddProfilePicButton
+2016-02-24 17:07:34 INFO  UserRegistration:137 - ----Calling-----clickOnAddAPicButton
+2016-02-24 17:07:37 INFO  UserRegistration:127 - ----Calling-----clickOnSearchBox
+2016-02-24 17:07:39 INFO  UserRegistration:113 - ----Calling-----enterTextSearchBox
+2016-02-24 17:07:40 INFO  UserRegistration:103 - ----Calling-----clickOnSaveButton
+2016-02-24 17:07:43 INFO  UserRegistration:92 - ----Calling-----clickOnFavMe
+2016-02-24 17:07:45 INFO  UserRegistration:79 - ----Calling-----logOut

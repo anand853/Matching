@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Util {
 	static WebDriver driver;
@@ -68,6 +70,7 @@ public class Util {
 	}
 
 	public static void findElementbyIdAndSendKeys(WebDriver driver, String id, String searchText) {
+		waitTime(driver, 10);
 		driver.findElement(By.id(id)).sendKeys(searchText);
 	}
 
@@ -76,31 +79,38 @@ public class Util {
 	}
 
 	public static void findElementbyNameAndSendKeys(WebDriver driver, String name, String searchText) {
+		waitTime(driver, 10);
 		driver.findElement(By.name(name)).sendKeys(searchText);
 	}
 
 	public static void findElementByXpathAndSendKeys(WebDriver driver, String xpath, String searchText) {
+		waitTime(driver, 10);
 		driver.findElement(By.xpath(xpath)).sendKeys(searchText);
 	}
 
 	public static WebElement findElementByXpath(WebDriver driver, String xpath) {
+		waitTime(driver, 10);
 		return driver.findElement(By.xpath(xpath));
 	}
 
 	public static WebElement findElementByLinkText(WebDriver driver, String linkText) {
+		waitTime(driver, 10);
 		return driver.findElement(By.linkText(linkText));
 	}
 
 	public static WebElement findElementByID(WebDriver driver, String id) {
+		waitTime(driver, 10);
 		return driver.findElement(By.id(id));
 	}
 
 	public static void findElementbyNameAndClick(WebDriver driver, String buttonName) {
+		waitTime(driver, 10);
 		driver.findElement(By.name(buttonName)).click();
 
 	}
 
 	public static WebElement findElementbyName(WebDriver driver, String buttonName) {
+		waitTime(driver, 10);
 		return driver.findElement(By.name(buttonName));
 
 	}
@@ -111,17 +121,32 @@ public class Util {
 	}
 
 	public static void findElementbyClassAndClick(WebDriver driver, String amazonSearchBtn) {
+		waitTime(driver, 10);
 		driver.findElement(By.className(amazonSearchBtn)).click();
 
 	}
 
-	public static List<String> addToList(WebDriver driver, String xpath_start, String xpath_end) {
+	public static void ExplicitWaitTimeByXpath(WebDriver driver, String locator, int secs) {
 
-		for (int i = 1; i <= 5; i++) {
-			list1.add(driver.findElement(By.xpath(xpath_start + i + xpath_end)).getText());
-		}
-		System.out.println(list1.size());
-		return list1;
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+	}
+
+	public static void ExplicitWaitTimeByID(WebDriver driver, String locator, int secs) {
+
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(locator)));
+	}
+
+	public static void ExplicitWaitTimeByName(WebDriver driver, String locator, int secs) {
+
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(locator)));
+	}
+
+	private static void ExplicitWaitTimeByLinkText(WebDriver driver2, String linkText, int i) {
+		WebDriverWait wait = new WebDriverWait(driver, i);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(linkText)));
 
 	}
 
