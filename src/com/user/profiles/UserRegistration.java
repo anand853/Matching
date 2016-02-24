@@ -1,8 +1,10 @@
 package com.user.profiles;
 
+import java.awt.RenderingHints.Key;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,270 +16,270 @@ public class UserRegistration {
 	static WebDriver driver;
 	static WebElement element;
 
-	public static void main(String[] args) {
+	static void clickOnMyFav() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.USER_FAV_LINK).click();
 
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.USER_FAV_LINK_2).click();
+
+		logOut();
+
+	}
+
+	static void clickOnUserName() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.USER_NAME).click();
+
+	}
+
+	static void LogIn() {
 		openBrowser();
 		acessToMatchSite();
 		maximizePage();
 		clickOnMemberSignLink();
-		clickOnRegistartionLink();
-		enterZipCode();
-		clickOnViewSinglesButton();
-		enterEmailId();
-		cilckOnContinuewButton();
-		enterPassword();
-		clickOnContinuewPassButton();
-		enterUserName();
-		clickOnContinuewUserButton();
-		clickOngetStartedButton();
-		clickOnHairColorButton();
-		clickOnRelationshipButton();
-		clickOnEducationButton();
-		clickOnSmokeButton();
-		clickOnBackgrounButton();
-		clickOnFavButton();
-		clickOnInterestButton();
-		clickOnHairEyeColorButton();
-		clickOnEducationLangButton();
-		clickOnEthinicButton();
-		clickOnRelationShipKidsButton();
-		clickOnSalaryButton();
-		clickOnHeadLinesButton();
-		clickOnAboutYouButton();
-		clickOnProfilePicButton();
-		clickOnFirstMatchesButton();
-		clickOnAddProfilePicButton();
-		clickOnAddAPicButton();
-
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
-		//
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.name("Next")).click();
-		//
-		// String iUserName =
-		// driver.findElement(By.xpath("//*[@id='progress']/a[1]")).getText();
-		// if (iUserName.equals(Constants.USERNAME_VALUE)) {
-		// System.out.println("test case pass");
-		//
-		// } else {
-		// System.out.println("test case failed");
-		// }
-		//
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.xpath(Constants.SEARCH_BTN)).click();
-		//
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.id("username-search")).sendKeys("Florida");
-		//
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.id("btn-username-search")).click();
-		//
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.xpath(Constants.SAVE_XPATH)).click();
-		//
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.xpath(Constants.FAV_LINK)).click();
-		//
-		// // sign out here
-		// Actions action = new Actions(driver);
-		// WebElement element =
-		// driver.findElement(By.xpath(Constants.USER_HOVER));
-		// action.moveToElement(element).moveToElement(driver.findElement(By.xpath(Constants.USER_LOGOUT))).click().build()
-		// .perform();
-	}
-
-	private static void clickOnAddAPicButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/div[3]/a")).click();
+		enterUserNamePass();
 
 	}
 
-	private static void clickOnAddProfilePicButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a")).click();
+	static void enterUserNamePass() {
+		Util.waitTime(driver, 10);
+		Util.findElementByID(driver, "email").sendKeys("KK_194k35113@gmail.com");
+		Util.findElementByID(driver, "password").sendKeys("password");
+		Util.findElementByID(driver, "password").sendKeys(Keys.ENTER);
 
 	}
 
-	private static void clickOnFirstMatchesButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.name("Next")).click();
+	static void logOut() {
+		Util.waitTime(driver, 10);
+		Actions action = new Actions(driver);
+		WebElement element = driver.findElement(By.xpath(Constants.USER_HOVER));
+		action.moveToElement(element).moveToElement(driver.findElement(By.xpath(Constants.USER_LOGOUT))).click().build()
+				.perform();
 
 	}
 
-	private static void clickOnProfilePicButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void clickOnFavMe() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.FAV_ME_BTN).click();
+
+	}
+
+	static void clickOnSaveButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.SEARCH_RESULTS).click();
+
+	}
+
+	static void enterTextSearchBox() {
+		Util.waitTime(driver, 10);
+		Util.findElementByID(driver, Constants.SEARCH_TXT).clear();
+		Util.findElementByID(driver, Constants.SEARCH_TXT).sendKeys("marilyn");
+		Util.findElementByID(driver, Constants.SEARCH_TXT).sendKeys(Keys.ENTER);
+
+	}
+
+	static void clickOnSearchBox() {
+		Util.waitTime(driver, 10);
+		Util.findElementByID(driver, Constants.SEARCH_ID).click();
+
+	}
+
+	static void clickOnAddAPicButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "/html/body/div[4]/div/div/div[1]/div[3]/a").click();
+
+	}
+
+	static void clickOnAddProfilePicButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a").click();
+
+	}
+
+	static void clickOnFirstMatchesButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementbyName(driver, "Next").click();
+
+	}
+
+	static void clickOnProfilePicButton() {
+		Util.waitTime(driver, 10);
 		retryingFindClick(By.xpath("//*[@id='progress']/a[1]"));
 
 	}
 
-	private static void clickOnAboutYouButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void clickOnAboutYouButton() {
+		Util.waitTime(driver, 10);
 		driver.findElement(By.xpath(Constants.SELFESSAY_TEXT)).sendKeys(
 				"NFO:" + " Pawan Kalyan is an Indian film actor, director, screenwriter, stunt coordinator, writer, "
 						+ "and politician. His film works are predominantly in Telugu cinema. He is the younger"
 						+ " brother of actor turned politician Chiranjeevi. ");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnHeadLinesButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(Constants.SELFHEADLINETEXT)).sendKeys("hi ih");
+	static void clickOnHeadLinesButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.SELFHEADLINETEXT).sendKeys("hi ih");
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
-
-	}
-
-	private static void clickOnSalaryButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnRelationShipKidsButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void clickOnSalaryButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
-		// retry
+	}
+
+	static void clickOnRelationShipKidsButton() {
+		Util.waitTime(driver, 10);
+
 		retryingFindClick(By.xpath("//*[@id='progress']/a[1]"));
-		// driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
 
 	}
 
-	private static void clickOnEthinicButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnEthinicButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnEducationLangButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnEducationLangButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnHairEyeColorButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnHairEyeColorButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnInterestButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnInterestButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnFavButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnFavButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnBackgrounButton() {
-		System.out.println("-----------clicked---started-5-----");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnBackgrounButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnSmokeButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnSmokeButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnEducationButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnEducationButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnRelationshipButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnRelationshipButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOnHairColorButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='progress']/a[1]")).click();
+	static void clickOnHairColorButton() {
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
 
 	}
 
-	private static void clickOngetStartedButton() {
+	static void clickOngetStartedButton() {
+		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.BTN_ONE).click();
 
 	}
 
-	private static void clickOnContinuewUserButton() {
+	static void clickOnContinuewUserButton() {
+		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.CONTINUE_USERNAME).click();
 
 	}
 
-	private static void enterUserName() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void enterUserName() {
+		Util.waitTime(driver, 10);
 		Util.findElementbyNameAndSendKeys(driver, Constants.USER_NAME_TXT, "anadn853");
 
 	}
 
-	private static void clickOnContinuewPassButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void clickOnContinuewPassButton() {
+		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.CONTINUE_BTN_PASS).click();
 
 	}
 
-	private static void enterPassword() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void enterPassword() {
+		Util.waitTime(driver, 10);
 		Util.findElementbyNameAndSendKeys(driver, Constants.PASSWORD_TXT, "password");
 
 	}
 
-	private static void cilckOnContinuewButton() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	static void cilckOnContinuewButton() {
+		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.CONTINUE_BTN).click();
 
 	}
 
-	private static void enterEmailId() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(Constants.EMAIL_ID)).sendKeys("KK_154k235113@gmail.com");
+	static void enterEmailId() {
+		Util.waitTime(driver, 10);
+		driver.findElement(By.xpath(Constants.EMAIL_ID)).sendKeys("KK_1564k35113@gmail.com");
 
 	}
 
-	private static void clickOnViewSinglesButton() {
+	static void clickOnViewSinglesButton() {
+		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.VIEW_SINGLE_BTN).click();
 
 	}
 
-	private static void enterZipCode() {
+	static void enterZipCode() {
+		Util.waitTime(driver, 10);
 		Util.findElementbyIdAndSendKeys(driver, "postalCode", "33605");
 
 	}
 
-	private static void clickOnRegistartionLink() {
+	static void clickOnRegistartionLink() {
+		Util.waitTime(driver, 10);
 		Util.findElementByLinkText(driver, Constants.RESGISTARTION_LINK_TXT).click();
 	}
 
-	private static void clickOnMemberSignLink() {
+	static void clickOnMemberSignLink() {
+		Util.waitTime(driver, 10);
 		Util.findElementByLinkText(driver, Constants.SIGNIN_TXT).click();
 
 	}
 
-	private static void maximizePage() {
+	static void maximizePage() {
 		driver.manage().window().maximize();
 
 	}
 
-	private static void acessToMatchSite() {
+	static void acessToMatchSite() {
+		Util.waitTime(driver, 10);
 		Util.getURL(driver, Constants.MATCH_COM);
 
 	}
 
-	private static void openBrowser() {
+	static void openBrowser() {
 		driver = Util.getBrowser("FF");
 
 	}

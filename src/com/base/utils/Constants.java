@@ -40,4 +40,14 @@ public interface Constants {
 
 	String USER_LOGOUT = "//*[@id='ctl00_matchHeader_ctl00_PrimaryNavigationRepeater1_ctl09_Repeater1_ctl03_HyperLink4']";
 
+	String SEARCH_ID = "ctl00_matchHeader_ctl00_PrimaryNavigationRepeater1_ctl03_HyperLink3";
+	String SEARCH_TXT = "username-search";
+
+	String SEARCH_RESULTS = "//*[@id='form-search-results']/div[4]/div[2]/div/div/a[2]";
+	String FAV_ME_BTN = "//*[@id='profile']/div[2]/ul[2]/li[3]/a";
+
+	String USER_NAME = "//*[@id='header-secondary']/div/span/a";
+	String USER_FAV_LINK = "//*[@id='module-user']/ul/li[2]/a";
+	String USER_FAV_LINK_2 = "//*[@id='list-page']/div/label[1]/span";
+
 }

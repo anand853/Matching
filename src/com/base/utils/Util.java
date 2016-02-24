@@ -3,6 +3,7 @@ package com.base.utils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -70,6 +71,10 @@ public class Util {
 		driver.findElement(By.id(id)).sendKeys(searchText);
 	}
 
+	public static void waitTime(WebDriver driver, int secs) {
+		driver.manage().timeouts().implicitlyWait(secs, TimeUnit.SECONDS);
+	}
+
 	public static void findElementbyNameAndSendKeys(WebDriver driver, String name, String searchText) {
 		driver.findElement(By.name(name)).sendKeys(searchText);
 	}
@@ -92,6 +97,11 @@ public class Util {
 
 	public static void findElementbyNameAndClick(WebDriver driver, String buttonName) {
 		driver.findElement(By.name(buttonName)).click();
+
+	}
+
+	public static WebElement findElementbyName(WebDriver driver, String buttonName) {
+		return driver.findElement(By.name(buttonName));
 
 	}
 
