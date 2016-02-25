@@ -56,4 +56,5 @@ public class UserRegistrationTest {
 		UserRegistration.clickOnFavMe();
 		UserRegistration.logOut();
 	}
+
 }

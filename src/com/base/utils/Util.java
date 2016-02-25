@@ -1,8 +1,5 @@
 package com.base.utils;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -18,9 +15,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Util {
 	static WebDriver driver;
 	static WebElement element;
-
-	static java.util.List<String> list1 = new ArrayList<String>();
-	static java.util.List<String> list2 = new ArrayList<String>();
 
 	public static String getPageTitle(WebDriver driver) {
 		return driver.getTitle();

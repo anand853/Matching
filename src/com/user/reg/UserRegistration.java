@@ -1,6 +1,6 @@
 package com.user.reg;
 
-import java.util.concurrent.TimeUnit;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -11,9 +11,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.base.utils.Constants;
+import com.base.utils.PropReader;
 import com.base.utils.Util;
 
 public class UserRegistration {
+
+	static Map map = PropReader.readProp();
 
 	static Logger logger = Logger.getLogger(UserRegistration.class);
 	static WebDriver driver;
@@ -33,6 +36,12 @@ public class UserRegistration {
 		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.USER_FAV_LINK_2).click();
 
+		String userName = Util.findElementByXpath(driver, Constants.USER_DETAILS).getText();
+		logger.info("userName -->" + userName);
+
+		String userName_ = (String) map.get("userName");
+		Assert.assertEquals(userName, userName_);
+
 		logOut();
 
 	}
@@ -40,6 +49,8 @@ public class UserRegistration {
 	public static void clickOnUserName() {
 		name = new Object() {
 		}.getClass().getEnclosingMethod().getName();
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
@@ -52,6 +63,7 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
+
 		openBrowser();
 		acessToMatchSite();
 		maximizePage();
@@ -65,9 +77,17 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
+
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+
 		Util.waitTime(driver, 10);
-		Util.findElementByID(driver, "email").sendKeys("KK_15602k35113@gmail.com");
-		Util.findElementByID(driver, "password").sendKeys("password");
+
+		String emailIDvalue = (String) map.get("emailID");
+		Util.findElementByID(driver, "email").clear();
+		Util.findElementByID(driver, "email").sendKeys(emailIDvalue);
+		Util.findElementByID(driver, "password").clear();
+		Util.findElementByID(driver, "password").sendKeys(Constants.PASSWORD);
 		Util.findElementByID(driver, "password").sendKeys(Keys.ENTER);
 
 	}
@@ -77,6 +97,9 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+
 		Util.waitTime(driver, 10);
 		Actions action = new Actions(driver);
 		WebElement element = driver.findElement(By.xpath(Constants.USER_HOVER));
@@ -91,6 +114,10 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		Assert.assertEquals(ititle, Constants.PAGE_TITLE_5);
+
 		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.FAV_ME_BTN).click();
 
@@ -101,6 +128,9 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		Assert.assertEquals(ititle, Constants.PAGE_TITLE_4);
 		Util.waitTime(driver, 10);
 		Util.findElementByXpath(driver, Constants.SEARCH_RESULTS).click();
 
@@ -111,10 +141,15 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
+
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		Assert.assertEquals(ititle, Constants.PAGE_TITLE_3);
+
 		Util.waitTime(driver, 10);
 		Util.findElementByID(driver, Constants.SEARCH_TXT).clear();
 		Util.waitTime(driver, 10);
-		Util.findElementByID(driver, Constants.SEARCH_TXT).sendKeys("marilyn");
+		Util.findElementByID(driver, Constants.SEARCH_TXT).sendKeys(Constants.SEARCH_KEY);
 		Util.waitTime(driver, 10);
 		Util.findElementByID(driver, Constants.SEARCH_TXT).sendKeys(Keys.ENTER);
 
@@ -125,6 +160,10 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
+
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		Assert.assertEquals(ititle, Constants.PAGE_TITLE_2);
 		Util.waitTime(driver, 10);
 		Util.findElementByID(driver, Constants.SEARCH_ID).click();
 
@@ -133,6 +172,10 @@ public class UserRegistration {
 	public static void clickOnAddAPicButton() {
 		name = new Object() {
 		}.getClass().getEnclosingMethod().getName();
+
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		// Assert.assertEquals(ititle, Constants.PAGE_TITLE);
 
 		logger.info(Constants.LOG_STATEMENT + name);
 		Util.waitTime(driver, 10);
@@ -144,8 +187,12 @@ public class UserRegistration {
 		name = new Object() {
 		}.getClass().getEnclosingMethod().getName();
 
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		// Assert.assertEquals(ititle, Constants.PAGE_TITLE);
+
 		logger.info(Constants.LOG_STATEMENT + name);
-		Util.findElementByXpath(driver, "//*[@id='progress']/a").click();
+		Util.findElementByXpath(driver, Constants.BUTTON_BASE_XPATH).click();
 
 	}
 
@@ -155,7 +202,11 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementbyName(driver, "Next").click();
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+		// Assert.assertEquals(ititle, Constants.PAGE_TITLE);
+
+		Util.findElementbyName(driver, Constants.NEXT).click();
 
 	}
 
@@ -165,7 +216,10 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		retryingFindClick(By.xpath("//*[@id='progress']/a[1]"));
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -175,13 +229,10 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 		Util.waitTime(driver, 10);
-		driver.findElement(By.xpath(Constants.SELFESSAY_TEXT))
-				.sendKeys("Match.com was founded by Gary Kremen and Peng T. Ong in 1993. It was started as a"
-						+ " proof-of-concept for Electric Classifieds which aimed to provide classified advertising "
-						+ "systems for newspapers. Early on, Kremen was assisted by Peng T. Ong, ");
+		driver.findElement(By.xpath(Constants.SELFESSAY_TEXT)).sendKeys(Constants.TEXT_AREA_TXT);
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		Util.waitTime(driver, 10);
+		Util.findElementByXpath(driver, Constants.BUTTON_XPATH).click();
 
 	}
 
@@ -191,9 +242,12 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+
 		Util.findElementByXpath(driver, Constants.SELFHEADLINETEXT).sendKeys("hi ih");
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		Util.findElementByXpath(driver, Constants.BUTTON_XPATH).click();
 
 	}
 
@@ -203,7 +257,10 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		String ititle = Util.getPageTitle(driver);
+		logger.info(" The page title is " + ititle);
+
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -213,7 +270,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		retryingFindClick(By.xpath("//*[@id='progress']/a[1]"));
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -223,7 +280,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 		Util.waitTime(driver, 10);
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -233,7 +290,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -243,7 +300,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -253,7 +310,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -263,7 +320,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -272,7 +329,7 @@ public class UserRegistration {
 		}.getClass().getEnclosingMethod().getName();
 
 		logger.info(Constants.LOG_STATEMENT + name);
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -282,7 +339,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -292,7 +349,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -302,7 +359,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -312,7 +369,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementByXpath(driver, "//*[@id='progress']/a[1]").click();
+		retryingFindClick(By.xpath(Constants.BUTTON_XPATH));
 
 	}
 
@@ -342,7 +399,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementbyNameAndSendKeys(driver, Constants.USER_NAME_TXT, "anadn853");
+		Util.findElementbyNameAndSendKeys(driver, Constants.USER_NAME_TXT, Constants.USERNAME_VALUE);
 
 	}
 
@@ -362,7 +419,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementbyNameAndSendKeys(driver, Constants.PASSWORD_TXT, "password");
+		Util.findElementbyNameAndSendKeys(driver, Constants.PASSWORD_TXT, Constants.PASSWORD);
 
 	}
 
@@ -382,7 +439,8 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 		Util.waitTime(driver, 10);
-		driver.findElement(By.xpath(Constants.EMAIL_ID)).sendKeys("KK_15602k35113@gmail.com");
+		String emaildid = (String) map.get("emailID");
+		driver.findElement(By.xpath(Constants.EMAIL_ID)).sendKeys(emaildid);
 
 	}
 
@@ -402,7 +460,7 @@ public class UserRegistration {
 
 		logger.info(Constants.LOG_STATEMENT + name);
 
-		Util.findElementbyIdAndSendKeys(driver, "postalCode", "33605");
+		Util.findElementbyIdAndSendKeys(driver, Constants.POSTAL_CODE, Constants.PIN_CODE);
 
 	}
 
@@ -443,7 +501,6 @@ public class UserRegistration {
 		Util.getURL(driver, Constants.MATCH_COM);
 		String ititle = Util.getPageTitle(driver);
 		logger.info(" The page title is " + ititle);
-		Assert.assertEquals(ititle, Constants.PAGE_TITLE);
 
 	}
 
@@ -451,8 +508,9 @@ public class UserRegistration {
 
 		name = new Object() {
 		}.getClass().getEnclosingMethod().getName();
-
-		driver = Util.getBrowser("FF");
+		// Map map = PropReader.readProp();
+		String type = (String) map.get("browserType");
+		driver = Util.getBrowser(type);
 
 	}
 
@@ -469,5 +527,15 @@ public class UserRegistration {
 			attempts++;
 		}
 		return result;
+	}
+
+	public static void ReLogIn() {
+		name = new Object() {
+		}.getClass().getEnclosingMethod().getName();
+
+		logger.info(Constants.LOG_STATEMENT + name);
+
+		enterUserNamePass();
+
 	}
 }

@@ -35,6 +35,17 @@ public interface Constants {
 
 	String USERNAME_VALUE = "anadn853";
 
+	String POSTAL_CODE = "postalCode";
+	String PIN_CODE = "33605";
+
+	String NEXT = "Next";
+	String EMAIL_ID_VALUE = "KK_15602k35113@gmail.com";
+	String SEARCH_KEY = "marilyn";
+	String PASSWORD = "password";
+
+	String BUTTON_XPATH = "//*[@id='progress']/a[1]";
+	String BUTTON_BASE_XPATH = "//*[@id='progress']/a";
+
 	String SEARCH_BTN = "//*[@id='ctl00_matchHeader_ctl00_PrimaryNavigationRepeater1_ctl03_HyperLink3']/div/span";
 
 	String SAVE_XPATH = "//*[@id='form-search-results']/div[4]/div[2]/div/div/a[2]";
@@ -54,5 +65,23 @@ public interface Constants {
 	String USER_NAME = "//*[@id='header-secondary']/div/span/a";
 	String USER_FAV_LINK = "//*[@id='module-user']/ul/li[2]/a";
 	String USER_FAV_LINK_2 = "//*[@id='list-page']/div/label[1]/span";
+
+	String PAGE_TITLE_1 = "Match.com - Find Singles with Match.com's Online Dating Personals Service : Match.com";
+
+	String PAGE_TITLE_2 = "My Profile: Match.com";
+
+	String PAGE_TITLE_3 = "Search : Match.com";
+
+	String PAGE_TITLE_4 = "Search : Match.com";
+
+	String USER_DETAILS = "//*[@id='tab-cnt-fave']/div[1]/div[2]/div/div[2]/h3/a";
+
+	String USER_DEATILS_TITLE = "JohnnyBeGood";
+
+	String PAGE_TITLE_5 = "Match.com - Find Singles with Match.com's Online Dating Personals Service";
+
+	String TEXT_AREA_TXT = "Match.com was founded by Gary Kremen and Peng T. Ong in 1993. It was started as a"
+			+ " proof-of-concept for Electric Classifieds which aimed to provide classified advertising "
+			+ "systems for newspapers. Early on, Kremen was assisted by Peng T. Ong,";
 
 }

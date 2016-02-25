@@ -14,16 +14,16 @@ public class RegistarionLogInTest {
 
 	@Test(priority = 1)
 	public void LogIn() {
-		user.LogIn();
+		UserRegistration.LogIn();
 	}
 
 	@Test(priority = 2)
 	public void clickOnUserName() {
-		user.clickOnUserName();
+		UserRegistration.clickOnUserName();
 	}
 
 	@Test(priority = 3)
 	public void clickOnMyFav() {
-		user.clickOnMyFav();
+		UserRegistration.clickOnMyFav();
 	}
 }
